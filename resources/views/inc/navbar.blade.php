@@ -47,7 +47,7 @@
             <ul class="wsmenu-list">
                 @hasanyrole('Registrerad|Admin')
                     <li aria-haspopup="false"><a href="/" class="menuhomeicon {{ request()->is('/') ? 'active' : '' }}"><i class="fa fa-home"></i><span class="hometext">&nbsp;&nbsp;@lang('Hem')</span></a></li>
-                    <li aria-haspopup="false"><a href="/tracks" class="{{ request()->is('tracks') ? 'active' : '' }}"></i>@lang('Spår')</a></li>
+                    <li aria-haspopup="false"><a href="tracks" class="{{ request()->is('tracks') ? 'active' : '' }}"></i>@lang('Spår')</a></li>
                     @if (session()->has('authnissuer'))
                         <li aria-haspopup="true"><a href="#"><i class="fa fa-angle-right"></i>@lang('Administration')</a>
                             <ul class="sub-menu">
@@ -56,22 +56,22 @@
                                         <li aria-haspopup="false"><a href="/users">@lang('Användare')</a></li>
                                     @endcan
                                     @canany(['add workplaces','edit workplaces'])
-                                        <li aria-haspopup="false"><a href="/workplace">@lang('Arbetsplatsinställningar')</a></li>
+                                        <li aria-haspopup="false"><a href="workplace">@lang('Arbetsplatsinställningar')</a></li>
                                     @endcanany
-                                    <li aria-haspopup="false"><a href="/projecttime/create">@lang('Registrera projekttid')</a></li>
-                                    <li aria-haspopup="false"><a href="/timeattest/create">@lang('Attestera projekttid')</a></li>
+                                    <li aria-haspopup="false"><a href="projecttime/create">@lang('Registrera projekttid')</a></li>
+                                    <li aria-haspopup="false"><a href="timeattest/create">@lang('Attestera projekttid')</a></li>
                                     @can('export ESF report')
-                                        <li aria-haspopup="false"><a href="/timesummary">@lang('Sammanställning till ESF')</a></li>
+                                        <li aria-haspopup="false"><a href="timesummary">@lang('Sammanställning till ESF')</a></li>
                                     @endcan
                                 @endcan
-                                <li aria-haspopup="false"><a href="/statistics">@lang('Statistik')</a></li>
+                                <li aria-haspopup="false"><a href="statistics">@lang('Statistik')</a></li>
                             </ul>
                         </li>
                     @endif
                     <li aria-haspopup="true"><a href="#"><i class="fa fa-angle-right"></i>{{Auth::user()->firstname}}</a>
                         <ul class="sub-menu">
-                            <li aria-haspopup="false"><a href="/settings">@lang('Inställningar')</a></li>
-                            <li aria-haspopup="false"><a href="/feedback">@lang('Feedback')</a></li>
+                            <li aria-haspopup="false"><a href="settings">@lang('Inställningar')</a></li>
+                            <li aria-haspopup="false"><a href="feedback">@lang('Feedback')</a></li>
                             {{--<li aria-haspopup="false"><a href="/projecttime/createsingleuser">@lang('Registrera projekttid')</a></li>
                             <li aria-haspopup="false"><a href="/timeattestlevel1/create">@lang('Attestera projekttid')</a></li>--}}
                             <li aria-haspopup="false"><a href="#" id="logout">@lang('Logga ut')</a></li>
