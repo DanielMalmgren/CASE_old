@@ -46,24 +46,24 @@ input[type="radio"] {
 
 .btn-primary {
     color: #fff;
-    background-color: #ff812c;
-    border-color: #ff812c;
+    background-color: #22aae2;
+    border-color: #22aae2;
 }
 
 .orange {
-    background-color: #ff812c;
+    background-color: #22aae2;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #ff812c;
-    border-color: #ff812c;
+    background-color: #22aae2;
+    border-color: #22aae2;
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
-    background-color: #ff812c;
-    border-color: #ff812c;
+    background-color: #22aae2;
+    border-color: #22aae2;
 }
 
 .black {

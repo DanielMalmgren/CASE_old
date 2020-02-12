@@ -46,7 +46,7 @@
         <nav class="wsmenu clearfix">
             <ul class="wsmenu-list">
                 @hasanyrole('Registrerad|Admin')
-                    <li aria-haspopup="false"><a href="/" class="menuhomeicon {{ request()->is('/') ? 'active' : '' }}"><i class="fa fa-home"></i><span class="hometext">&nbsp;&nbsp;@lang('Hem')</span></a></li>
+                    <li aria-haspopup="false"><a href="{{env('APP_URL')}}" class="menuhomeicon {{ request()->is('/') ? 'active' : '' }}"><i class="fa fa-home"></i><span class="hometext">&nbsp;&nbsp;@lang('Hem')</span></a></li>
                     <li aria-haspopup="false"><a href="tracks" class="{{ request()->is('tracks') ? 'active' : '' }}"></i>@lang('Spår')</a></li>
                     @if (session()->has('authnissuer'))
                         <li aria-haspopup="true"><a href="#"><i class="fa fa-angle-right"></i>@lang('Administration')</a>
@@ -80,12 +80,12 @@
                 @endhasanyrole
                 <li aria-haspopup="true"><a href="#"><i class="fa fa-angle-right"></i>@lang('Hjälp')</a>
                     <ul class="sub-menu">
-                        <li aria-haspopup="false"><a target="_blank" href="/pdf/Evikomp%20användarmanual.pdf">@lang('Användarmanual')</a></li>
+                        <li aria-haspopup="false"><a target="_blank" href="pdf/Evikomp%20användarmanual.pdf">@lang('Användarmanual')</a></li>
                         @can('use administration')
-                            <li aria-haspopup="false"><a target="_blank" href="/pdf/Evikomp%20administratörsmanual.pdf">@lang('Administratörsmanual')</a></li>
+                            <li aria-haspopup="false"><a target="_blank" href="pdf/Evikomp%20administratörsmanual.pdf">@lang('Administratörsmanual')</a></li>
                         @endcan
                         @hasrole('Admin')
-                            <li aria-haspopup="false"><a target="_blank" href="/pdf/Evikomp%20intern%20manual.pdf">@lang('Intern manual')</a></li>
+                            <li aria-haspopup="false"><a target="_blank" href="pdf/Evikomp%20intern%20manual.pdf">@lang('Intern manual')</a></li>
                         @endhasrole
                         <li aria-haspopup="false"><a target="_blank" href="https://www.linkoping.se/utforarwebben/vard-stod-och-omsorg/forskning-och-utveckling/pagaende-projekt/evikomp/">@lang('Om Evikomp')</a></li>
                     </ul>
