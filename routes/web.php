@@ -2,7 +2,7 @@
 
 Auth::routes();
 
-Route::get('/unsecurelogin',                    'HomeController@unsecurelogin');
+//Route::get('/login',                            'HomeController@login');
 
 Route::get('/',                                 'HomeController@index');
 Route::get('/about',                            'HomeController@about');

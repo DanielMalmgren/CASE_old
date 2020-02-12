@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" media="all" href="{{asset('webslidemenu/dropdown-effects/fade-down.css')}}" />
         <link rel="stylesheet" type="text/css" media="all" href="{{asset('webslidemenu/webslidemenu.css')}}">
         <script type="text/javascript" language="javascript" src="{{asset('webslidemenu/webslidemenu.js')}}"></script>
-        <link rel="stylesheet" type="text/css" media="all" href="{{asset('webslidemenu/color-skins/black-orange.css')}}" />
+        <link rel="stylesheet" type="text/css" media="all" href="{{asset('webslidemenu/color-skins/white-green.css')}}" />
         <link rel="stylesheet" href="/trumbowyg/ui/trumbowyg.min.css">
 
         <script src="/js/timeme.min.js"></script>
@@ -23,35 +23,6 @@
         <script src="/select2/i18n/{{substr(App::getLocale(), 0, 2)}}.js"></script>
 
         <script type="text/javascript">
-            TimeMe.initialize({
-                idleTimeoutInSeconds: 300 // seconds
-            });
-
-            function sendActiveTime() {
-                var time = Math.ceil(TimeMe.getTimeOnCurrentPageInSeconds());
-                if(isNaN(time)) {
-                    return;
-                }
-                var token = "{{ csrf_token() }}";
-                $.ajax({
-                    url: '/activetime',
-                    data : {_token:token,time:time},
-                    type: 'POST'
-                });
-            }
-
-            setInterval(function() {
-                if(!document.hidden) {
-                    sendActiveTime();
-                    TimeMe.resetAllRecordedPageTimes();
-                    TimeMe.startTimer();
-                }
-            }, 10000);
-
-            window.onbeforeunload = function(){
-                sendActiveTime();
-            };
-
             jQuery(window).on('load resize scroll ajaxComplete mousewheel touchstart touchend', function () {
                 if ($('footer').isInViewport()) {
                     $('.feedback').addClass("visible-footer");
@@ -79,9 +50,9 @@
             @include('inc.messages')
             @yield('content')
         </div>
-        @if(!\Request::is('feedback'))
+        {{--@if(!\Request::is('feedback'))
             <div class="feedback"><a href="/feedback"><img src="/images/Speech_balloons/Speech_balloon_{{App::getLocale()}}.png"></a></div>
-        @endif
+        @endif--}}
         @include('inc.footer')
     </body>
 </html>

@@ -43,7 +43,7 @@ class Handler extends ExceptionHandler
         parent::report($exception);
     }
 
-    protected function unauthenticated($request, AuthenticationException $exception)
+    /*protected function unauthenticated($request, AuthenticationException $exception)
     {
         if ($request->expectsJson())
         {
@@ -51,6 +51,6 @@ class Handler extends ExceptionHandler
         }
 
         return Saml2Auth::login();
-    }
+    }*/
 
 }

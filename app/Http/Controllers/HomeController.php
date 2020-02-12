@@ -39,9 +39,9 @@ class HomeController extends Controller
         return view('pages.about');
     }
 
-    public function unsecurelogin() {
-        return view('pages.unsecurelogin');
-    }
+    /*public function login() {
+        return view('pages.login');
+    }*/
 
     public function logout() {
         session()->flush();

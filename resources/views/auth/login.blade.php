@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', __('Alternativ inloggning'))
+@section('title', __('Inloggning'))
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">@lang('Alternativ inloggning för personal som saknar e-legitimation')</div>
+                <div class="card-header">@lang('Ange e-postadress och lösenord för att logga in')</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">

@@ -72,8 +72,8 @@
                         <ul class="sub-menu">
                             <li aria-haspopup="false"><a href="/settings">@lang('Inställningar')</a></li>
                             <li aria-haspopup="false"><a href="/feedback">@lang('Feedback')</a></li>
-                            <li aria-haspopup="false"><a href="/projecttime/createsingleuser">@lang('Registrera projekttid')</a></li>
-                            <li aria-haspopup="false"><a href="/timeattestlevel1/create">@lang('Attestera projekttid')</a></li>
+                            {{--<li aria-haspopup="false"><a href="/projecttime/createsingleuser">@lang('Registrera projekttid')</a></li>
+                            <li aria-haspopup="false"><a href="/timeattestlevel1/create">@lang('Attestera projekttid')</a></li>--}}
                             <li aria-haspopup="false"><a href="#" id="logout">@lang('Logga ut')</a></li>
                         </ul>
                     </li>

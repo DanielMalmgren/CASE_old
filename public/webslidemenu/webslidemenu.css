@@ -119,7 +119,7 @@ Extra @Media Query
   padding: 22px 0px 0px 0px;
   margin: 0;
   float: left;
-  width: 133px;
+  width: 55px; /* Changed by Daniel from default 133 */
 }
 
 .desktoplogo img {
