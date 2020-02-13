@@ -41,7 +41,7 @@
             };
         </script>
 
-        <title>@yield('title') - Evikomp</title>
+        <title>@yield('title') - CASE</title>
 
     </head>
     <body>

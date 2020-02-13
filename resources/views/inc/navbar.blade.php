@@ -87,7 +87,7 @@
                         @hasrole('Admin')
                             <li aria-haspopup="false"><a target="_blank" href="pdf/Evikomp%20intern%20manual.pdf">@lang('Intern manual')</a></li>
                         @endhasrole
-                        <li aria-haspopup="false"><a target="_blank" href="https://www.linkoping.se/utforarwebben/vard-stod-och-omsorg/forskning-och-utveckling/pagaende-projekt/evikomp/">@lang('Om Evikomp')</a></li>
+                        <li aria-haspopup="false"><a target="_blank" href="https://www.linkoping.se/utforarwebben/vard-stod-och-omsorg/forskning-och-utveckling/pagaende-projekt/">@lang('Om CASE')</a></li>
                     </ul>
                 </li>
                 @hasanyrole('Registrerad|Admin')
