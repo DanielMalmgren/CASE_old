@@ -40,7 +40,7 @@
 <div class="wsmainfull clearfix">
     <div class="wsmainwp clearfix">
 
-        <div class="desktoplogo"><a href="/"><img src="{{env('HEADER_LOGO')}}"></a></div>
+        <div class="desktoplogo"><a href="{{env('APP_URL')}}"><img src="{{env('HEADER_LOGO')}}"></a></div>
 
         <!--Main Menu HTML Code-->
         <nav class="wsmenu clearfix">
