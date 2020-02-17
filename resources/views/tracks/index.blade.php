@@ -15,7 +15,7 @@
         <ul class="list-group mb-3 tracks">
             @foreach($tracks as $track)
                 <li class="list-group-item d-flex justify-content-between lh-condensed nopadding">
-                    <a href="/track/{{$track->id}}">
+                    <a href="{{env('APP_URL')}}/track/{{$track->id}}">
                         <h6 class="my-0">{{$track->translateOrDefault(App::getLocale())->name}}</h6>
                         <small class="text-muted">{{$track->translateOrDefault(App::getLocale())->subtitle}}</small>
                     </a>

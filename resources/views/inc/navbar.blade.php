@@ -33,14 +33,14 @@
 <!-- Mobile Header -->
 <div class="wsmobileheader clearfix ">
     <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
-    <span class="smllogo"><a href="#"><img src="{{env('HEADER_LOGO')}}"></a></span>
+    <span class="smllogo"><a href="#"><img src="{{env('APP_URL')}}{{env('HEADER_LOGO')}}"></a></span>
 </div>
 <!-- Mobile Header -->
 
 <div class="wsmainfull clearfix">
     <div class="wsmainwp clearfix">
 
-        <div class="desktoplogo"><a href="{{env('APP_URL')}}"><img src="{{env('HEADER_LOGO')}}"></a></div>
+        <div class="desktoplogo"><a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}{{env('HEADER_LOGO')}}"></a></div>
 
         <!--Main Menu HTML Code-->
         <nav class="wsmenu clearfix">
