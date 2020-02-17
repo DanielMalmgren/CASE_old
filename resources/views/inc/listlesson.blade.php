@@ -1,4 +1,4 @@
-<a href="lessons/{{$lesson->id}}" class="list-group-item list-group-item-action {{$lesson->active?"":"list-group-item-secondary"}}"  id="id-{{$lesson->id}}">
+<a href="{{env('APP_URL')}}/lessons/{{$lesson->id}}" class="list-group-item list-group-item-action {{$lesson->active?"":"list-group-item-secondary"}}"  id="id-{{$lesson->id}}">
     <div class="row">
         <div class="col-lg-9 col-md-7 col-sm-5">
             <h5 class="mb-0">
