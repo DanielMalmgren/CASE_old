@@ -30,7 +30,7 @@ class Content extends Model
     }
 
     public function url() {
-        return "/storage/files/".$this->id.'.'.pathinfo($this->content, PATHINFO_EXTENSION);
+        return env('APP_URL')."/storage/files/".$this->id.'.'.pathinfo($this->content, PATHINFO_EXTENSION);
     }
 
     public function filename() {

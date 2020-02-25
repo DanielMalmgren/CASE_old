@@ -15,7 +15,7 @@
     @endif
 
     @can('manage lessons')
-        <a href="/lessons/create/{{$track->id}}" class="btn btn-primary">@lang('Lägg till lektion')</a>
+        <a href="{{env('APP_URL')}}/lessons/create/{{$track->id}}" class="btn btn-primary">@lang('Lägg till lektion')</a>
 
         <script type="text/javascript" language="javascript" src="{{asset('vendor/jquery-ui-1.12.1.custom/jquery-ui.min.js')}}"></script>
         <script type="text/javascript">
@@ -25,7 +25,7 @@
                     var token = "{{ csrf_token() }}";
                     var data = $(this).sortable('serialize');
                     $.ajax({
-                        url: '/lessons/reorder',
+                        url: '{{env('APP_URL')}}/lessons/reorder',
                         data : {_token:token,data:data},
                         type: 'POST'
                     });
