@@ -17,7 +17,7 @@
 
     @can('manage announcements')
         <br>
-        <a href="/announcements/{{$announcement->id}}/edit" class="btn btn-primary">@lang('Redigera')</a>
+        <a href="{{env('APP_URL')}}/announcements/{{$announcement->id}}/edit" class="btn btn-primary">@lang('Redigera')</a>
         <br><br>
 
         <form class="delete" action="{{action('AnnouncementsController@destroy', $announcement->id)}}" method="post">
